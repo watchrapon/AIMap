@@ -1,7 +1,7 @@
 
 AIMap เป็นโปรเจกต์ที่พัฒนาด้วย React และ Next.js โดยมีการผสาน AI เพื่อสร้าง Mind Map ที่มีความสามารถในการใช้งานและปรับแต่งได้หลากหลาย ดังนี้:
 
-1. ส่วน AI
+ส่วน AI
 โฟลเดอร์หลัก: lib/ai-content.ts และ components/ai-content-modal.tsx
 การทำงาน:
 generateAIContent(topic: string):
@@ -10,7 +10,7 @@ generateAIContent(topic: string):
 AIContentModal:
 โมดัลสำหรับแสดงผลเนื้อหาที่สร้างจาก AI
 รองรับการถามตอบแบบ Chat โดยใช้ฟังก์ชัน handleSubmitQuestion เพื่อส่งคำถามไปยัง AI และแสดงผลลัพธ์กลับมา
-2. ส่วน Main Mapping
+ส่วน Main Mapping
 โฟลเดอร์หลัก: components/mind-map.tsx และ components/enhanced-mind-map.tsx
 การทำงาน:
 ใช้ไลบรารี D3.js ในการสร้างโครงสร้าง Mind Map แบบ Radial Tree
@@ -24,7 +24,7 @@ treeLayout:
 การปรับแต่ง:
 รองรับการซูมเข้า-ออก (zoomIn, zoomOut) และรีเซ็ตมุมมอง (resetView)
 ใช้การคลิกเพื่อเปิดโมดัล AI Content
-3. ส่วนการตกแต่ง (Styling)
+ส่วนการตกแต่ง (Styling)
 โฟลเดอร์หลัก: styles/globals.css และ tailwind.config.ts
 การทำงาน:
 ใช้ Tailwind CSS เพื่อจัดการสไตล์
@@ -32,13 +32,13 @@ treeLayout:
 --background, --foreground: สำหรับธีมพื้นหลังและตัวอักษร
 --primary, --secondary: สีหลักและสีรอง
 รองรับธีมแบบ Dark/Light ผ่าน ThemeProvider
-4. ส่วนการส่งการทำงาน
+ส่วนการส่งการทำงาน
 โฟลเดอร์หลัก: lib/gemini.ts
 การทำงาน:
 ฟังก์ชัน generateMindMap(prompt: string):
 ใช้ Google Gemini AI ในการสร้าง Mind Map จากข้อความ Prompt
 โครงสร้างผลลัพธ์เป็น JSON ที่มีหัวข้อหลัก (topic) และสาขา (children)
-5. การเขียน Prompt
+การเขียน Prompt
 โฟลเดอร์หลัก: lib/gemini.ts
 การทำงาน:
 สร้างข้อความ Prompt ที่มีคำแนะนำชัดเจน เช่น:

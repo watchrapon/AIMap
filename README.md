@@ -10,10 +10,12 @@ generateAIContent(topic: string):
 AIContentModal:
 โมดัลสำหรับแสดงผลเนื้อหาที่สร้างจาก AI
 รองรับการถามตอบแบบ Chat โดยใช้ฟังก์ชัน handleSubmitQuestion เพื่อส่งคำถามไปยัง AI และแสดงผลลัพธ์กลับมา
+
 ส่วน Main Mapping
 โฟลเดอร์หลัก: components/mind-map.tsx และ components/enhanced-mind-map.tsx
 การทำงาน:
 ใช้ไลบรารี D3.js ในการสร้างโครงสร้าง Mind Map แบบ Radial Tree
+
 ฟังก์ชันสำคัญ:
 radialPoint(x, y):
 แปลงพิกัดจาก Polar เป็น Cartesian
@@ -24,6 +26,7 @@ treeLayout:
 การปรับแต่ง:
 รองรับการซูมเข้า-ออก (zoomIn, zoomOut) และรีเซ็ตมุมมอง (resetView)
 ใช้การคลิกเพื่อเปิดโมดัล AI Content
+
 ส่วนการตกแต่ง (Styling)
 โฟลเดอร์หลัก: styles/globals.css และ tailwind.config.ts
 การทำงาน:
@@ -34,6 +37,7 @@ treeLayout:
 รองรับธีมแบบ Dark/Light ผ่าน ThemeProvider
 ส่วนการส่งการทำงาน
 โฟลเดอร์หลัก: lib/gemini.ts
+
 การทำงาน:
 ฟังก์ชัน generateMindMap(prompt: string):
 ใช้ Google Gemini AI ในการสร้าง Mind Map จากข้อความ Prompt
